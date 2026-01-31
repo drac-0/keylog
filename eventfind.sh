@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 a=$(ls -lh /dev/input/by-path/ | grep kbd)
 i=0
 while true; do
