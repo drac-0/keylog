@@ -63,7 +63,7 @@ int main(int argc, char *argv[]){
 
 
     else if (ie.code == KEY_CAPSLOCK){
-      CAPS = true;
+      CAPS = !CAPS;
     } 
 
     //capslock logic
