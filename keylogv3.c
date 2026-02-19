@@ -281,7 +281,10 @@ int main(int argc, char *argv[]){
       case KEY_BACKSPACE:
         udpsend("\b");
         break;
-      case 
+      case KEY_ENTER:
+        udpsend("\n");
+        break;
+
       default:
         printf("UNKNOWN\n");
       }
